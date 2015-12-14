@@ -3,7 +3,7 @@
 # Category.create!(title: 'Main Courses')
 # Category.create!(title: 'Desserts')
 
-
+Recipe.create!(title: "Soup", description: "Hot liquid food", ingredients: "Stock, other things, more things", method: "Boil all the things then blend them", image:"http://www.metalculture.com/wp-content/uploads/Recipe-For-Potage-aux-Legumes-Green-Vegetable-Soup.jpg", category_id: 1)
 
 
 
