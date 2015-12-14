@@ -1,7 +1,10 @@
 <h1><%= @recipe.title %></h1>
 <section>
+  <p><%= @recipe.category.title %></p><br>
   <p><%= @recipe.description %></p><br>
   <p><%= @recipe.ingredients %></p><br>
   <p><%= @recipe.method %></p><br>
   <img src="<%= @recipe.image %>" width="320">
-</section>
+</section><br>
+<%= link_to('Edit Recipe', edit_recipe_path(@recipe)) %><br>
+<%= button_to("Delete #{@recipe.title} ?", recipe_path(@recipe), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>

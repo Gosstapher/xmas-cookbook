@@ -1,0 +1,22 @@
+<%= form_for @recipe do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+  <br>
+  <%= f.label :method %>
+  <%= f.text_field :method %>
+  <br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+  <%= f.label :category_id %>
+    <% options = options_from_collection_for_select(@category, 'id', 'title', @recipe.category.id) %>
+    <%= f.select :category_id, options %>
+  <br>
+  <%= f.submit 'Update Recipe' %>
+<% end %>
