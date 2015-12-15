@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset='utf-8'>
   <title>XmasCookbook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<header>
   <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/recipes">Recipes</a></li>
-    </ul>
+    <div class="go-left">
+      <h1>Xmas Cookbook</h1>
+    </div>
+    <div class="go-right">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">Recipes</a></li>
+      </ul>
+    </div>  
   </nav>
 
-<%= yield %>
+</header>
+<body>
+
+
+  <%= yield %>
 
 </body>
 </html>

@@ -1,3 +1,61 @@
+header{
+  height: 65px;
+}
+
+body {
+background-color: gainsboro;
+}
+
+body section a {
+  color: black;
+  text-decoration: none;
+  
+
+}
+
+body h1 {
+  color: darkgoldenrod;
+}
+
+nav {
+  background-color: rgb(38, 45, 66);
+  height: 65px;
+  line-height: 65px;
+}
+
+nav h1 {
+  display: inline-block;
+  height: 65px;
+  line-height: 65px;
+  margin: 0px; 
+  padding-left: 20px;
+}
+
+nav ul {
+  padding-left: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.go-right {
+  float: right;
+}
+
+.go-left {
+  float: left;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

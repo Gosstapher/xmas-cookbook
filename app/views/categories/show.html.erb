@@ -2,7 +2,8 @@
 <section>
   <ul>
     <% @category.recipes.each do |recipe| %>
-      <li><%= link_to("#{recipe.title}", recipe_path(recipe)) %></li><br>
+      <li><%= link_to("#{recipe.title}", recipe_path(recipe)) %></li>
+      <img src="<%= recipe.image %>" alt="image goes here" width="320"><br>
     <% end %>
   </ul>
 </section>

@@ -1,4 +1,10 @@
-<% @categories.each do |category| %>
-  <%= link_to("#{category.title}", category_path(category))%><br>
-<% end %>
-<%= link_to('Add new category', new_category_path) %>
+
+<body>
+<section>
+    <br>
+    <% @categories.each do |category| %>
+    <%= link_to("#{category.title}", category_path(category))%><br>
+    <% end %>
+    <%= link_to('Add new category', new_category_path) %>
+  </section>
+</body>
