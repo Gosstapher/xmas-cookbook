@@ -1,4 +1,4 @@
 class Recipe < ActiveRecord::Base
   belongs_to :category
-  belongs_to_and_has_many :ingredients
+  has_and_belongs_to_many :ingredients
 end

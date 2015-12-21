@@ -1,3 +1,3 @@
 class Ingredient < ActiveRecord::Base
-  belongs_to_and_has_many :recipes
+  has_and_belongs_to_many :recipes
 end
