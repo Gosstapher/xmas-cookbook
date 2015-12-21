@@ -6,7 +6,7 @@
   <%= f.text_field :description %>
   <br>
   <%= f.label :ingredients %>
-  <%= select_tag "ingredient_to_add", options_from_collection_for_select(Ingredient.all, 'id', 'title',@recipe.ingredients.map{ |j| j.id }), :multiple => true %>
+  <%= select_tag "ingredients_to_add", options_from_collection_for_select(Ingredient.all, 'id', 'title', @recipe.ingredients.map{ |j| j.id }), :multiple => true %>
   <br>
   <%= f.label :method %>
   <%= f.text_field :method %>
