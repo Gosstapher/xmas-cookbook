@@ -27,6 +27,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @category = Category.find(params["recipe"]["category_id"].to_i)
     @category.recipes << @recipe
+    @ingredients = Ingredient.where(:id => params[:ingredients_to_add])
+    @recipe.ingredients = @ingredients
     @recipe.update(recipe_params)
     redirect_to(recipes_path)
   end
@@ -41,7 +43,7 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :ingredients, :method, :image, :category_id)
+    params.require(:recipe).permit(:title, :description, :method, :image, :category_id)
   end
 
 end

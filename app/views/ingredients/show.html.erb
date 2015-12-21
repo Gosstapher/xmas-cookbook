@@ -1,0 +1,7 @@
+<h1><%= @ingredient.title %></h1>
+<section>
+  <p><%= @ingredient.description %></p><br>
+  <img src="<%= @ingredient.image %>" width="320">
+</section><br>
+<%= link_to("Edit #{@ingredient.title}", edit_ingredient_path(@ingredient)) %><br>
+<%= button_to("Delete #{@ingredient.title} ?", ingredient_path(@ingredient), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>

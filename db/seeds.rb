@@ -9,6 +9,8 @@
 
 # Ingredient.create!(title: "Onion", description: "It's an onion", image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Onion_on_White.JPG")
 
+#Ingredient.create!(title: "Carrots", description: "Orange Pointers", image: "http://pngimg.com/upload/carrot_PNG4985.png")
+
 
 
 

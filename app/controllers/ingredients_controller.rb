@@ -6,10 +6,11 @@ class IngredientsController < ApplicationController
 
   def new
     @ingredient = Ingredient.new
+    @recipe = Recipe.all
   end
 
   def create
-    @ingredient = Ingredient.create
+    Ingredient.create(ingredient_params)
     redirect_to(ingredients_path)
   end
 
@@ -19,10 +20,13 @@ class IngredientsController < ApplicationController
 
   def edit
     @ingredient = Ingredient.find(params[:id])
+    @recipe = Recipe.all
   end
 
   def update
     @ingredient = Ingredient.find(params[:id])
+    @ingredient.update(ingredient_params)
+    redirect_to(ingredients_path)
   end
 
   def destroy
