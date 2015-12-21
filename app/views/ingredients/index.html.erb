@@ -1,1 +1,4 @@
-Hello
+<% @ingredients.each do |ingredient| %>
+  <%= link_to("#{ingredient.title}", ingredient_path(ingredient))%><br>
+<% end %>
+

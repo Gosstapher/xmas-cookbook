@@ -7,7 +7,7 @@
 
 # Recipe.create!(title: "Garlic Bread", description: "Garlic flavoured bread", ingredients: "Garlic, Bread", method: "Combine both Garlic and Bread.", image:"http://www.romaniangarlic.com/wp-content/uploads/2015/02/Garlic_Bread.jpg", category_id: 1)
 
-
+# Ingredient.create!(title: "Onion", description: "It's an onion", image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Onion_on_White.JPG")
 
 
 
