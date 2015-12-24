@@ -2,10 +2,11 @@
 <section>
   <p><%= @recipe.category.title %></p><br>
   <p><%= @recipe.description %></p><br>
-  <p><% @recipe.ingredients.each do |ingredient|%>
-    <%= link_to("#{ingredient.title}",ingredient_path(ingredient)) %><br>
+  <h5>Ingredients : </h5><br>
+  <ul><% @recipe.ingredients.each do |ingredient|%>
+      <li><%= link_to("#{ingredient.title}",ingredient_path(ingredient)) %></li><br>
     <% end %>
-  </p><br>
+  </ul><br>
   <p><%= @recipe.method %></p><br>
   <img src="<%= @recipe.image %>" width="320">
 </section><br>

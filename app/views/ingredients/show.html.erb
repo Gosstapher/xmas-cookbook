@@ -2,9 +2,11 @@
 <section>
   <p><%= @ingredient.description %></p><br>
   <img src="<%= @ingredient.image %>" width="320">
-  <p><% @ingredient.recipes.each do |recipe| %>
-       <%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
+  <h5><%= "Recipes using #{@ingredient.title}" %></h5>
+  <ul><% @ingredient.recipes.each do |recipe| %>
+       <li><%= link_to("#{recipe.title}", recipe_path(recipe)) %></li><br>
      <% end %>
+     </ul>
 </section><br>
 <%= link_to("Edit #{@ingredient.title}", edit_ingredient_path(@ingredient)) %><br>
 <%= button_to("Delete #{@ingredient.title} ?", ingredient_path(@ingredient), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>
