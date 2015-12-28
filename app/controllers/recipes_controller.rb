@@ -31,11 +31,7 @@ class RecipesController < ApplicationController
     @category.recipes << @recipe
     @recipe.ingredients.destroy_all
     @recipe.ingredients << @ingredients
-    # binding.pry
     @recipe.update(recipe_params)
-
-
-
     redirect_to(recipes_path)
   end
 
@@ -48,8 +44,8 @@ class RecipesController < ApplicationController
 
 
   private
-  def recipe_params
-    params.require(:recipe).permit(:title, :description, :method, :image, :category_id, :ingredients)
-  end
+    def recipe_params
+      params.require(:recipe).permit(:title, :description, :method, :image, :category_id, :ingredients)
+    end
 
 end
