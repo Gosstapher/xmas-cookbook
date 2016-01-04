@@ -3,10 +3,11 @@
   <p><%= @recipe.category.title %></p><br>
   <p><%= @recipe.description %></p><br>
   <h5>Ingredients : </h5><br>
-  <ul><% @recipe.ingredients.each do |ingredient|%>
-      <li><%= link_to("#{ingredient.title}",ingredient_path(ingredient)) %></li><br>
-    <% end %>
-  </ul><br>
+  <ul><% @recipe.quantities.each do |quantity| %>
+  <li><%= "Amount : #{quantity.amount}" %>
+  <%= link_to "#{quantity.ingredient.title}", ingredient_path(quantity.ingredient.id) %></li>
+  <% end %>
+  </ul>
   <p><%= @recipe.method %></p><br>
   <img src="<%= @recipe.image %>" width="320">
 </section><br>
